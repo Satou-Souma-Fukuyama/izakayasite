@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>メニュー｜ときわてい</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">TOP</a></li>
+            <li class="has-submenu">
+                <a href="menu.html">おすすめメニュー</a>
+                <ul class="submenu">
+                    <li><a href="food.html">食べ物メニュー</a></li>
+                    <li><a href="drink.html">ドリンクメニュー</a></li>
+                </ul>
+            </li>
+            <li><a href="access.html">アクセス</a></li>
+        </ul>
+    </nav>
+
+
+    <main class="container">
+        <br />
+        <br />
+
+        <div class="menu-search">
+            <div class="search-wrapper">
+                <input type="text" id="menuSearch" placeholder="メニューを検索">
+                <button id="clearSearch">×</button>
+            </div>
+        </div>
+
+        <p id="noResult" style="display:none; text-align:center; color:#c62828; font-weight:bold;">
+            該当するメニューがありません
+        </p>
+        <h1 style="text-align:center">おすすめメニュー</h1>
+
+
+
+        <section class="box">
+            <h2>おすすめ</h2>
+            <ul class="menu-list recommend-list">
+                <li>
+                    <span class="menu-name">＜ときわてい＞塩ホルモン</span>
+                    <img src="img/塩ホルモン.webp" alt="塩ホルモン">
+                    <span class="menu-price">1099円</span>
+                </li>
+                <li>
+                    <span class="menu-name">肉塊レモン牛タン</span>
+                    <img src="img/肉塊レモン牛タン.jpg" alt="肉塊レモン牛タン">
+                    <span class="menu-price">1869円</span>
+                </li>
+                <li>
+                    <span class="menu-name">牛とろ塩ホルモン</span>
+                    <img src="img/牛トロ塩ホルモン.jpg" alt="牛とろ塩ホルモン">
+                    <span class="menu-price">549円</span>
+                </li>
+            </ul>
+        </section>
+
+
+
+        <div class="menu-nav">
+            <a href="food.html" class="menu-link">食べ物メニュー</a>
+            <a href="drink.html" class="menu-link">ドリンクメニュー</a>
+        </div>
+    </main>
+
+    <script src="java/java.js"></script>
+
+    <footer>
+        <p>&copy; ときわてい</p>
+    </footer>
+</body>
+</html>
