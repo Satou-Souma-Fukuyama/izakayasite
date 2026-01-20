@@ -1,0 +1,501 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    line-height: 1.7;
+    background-image: url("../img/bg.jpg");
+    background-size: cover; /* 画面いっぱいに拡大 */
+    background-position: center; /* 中央基準 */
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* スクロールしても固定（不要なら削除） */
+}
+
+
+/* ===== ナビゲーション ===== */
+nav {
+    background: rgba(59, 31, 31, 0.95);
+    height: 60px;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+
+    nav ul {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 10px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    nav a {
+        color: #fff;
+        text-decoration: none;
+        margin: 0 15px;
+        font-weight: bold;
+    }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+/* ===== ヒーロー ===== */
+.hero {
+    color: #fff;
+    text-align: center;
+    padding: 120px 20px;
+    background: transparent;
+    margin-top: 60px; /* ★ 固定ナビ分ずらす */
+}
+
+
+
+    .hero h1 {
+        font-size: 3rem;
+        margin-bottom: 10px;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+    }
+
+/* ===== レイアウト ===== */
+.container {
+    max-width: 900px;
+    margin: 1px auto;
+    padding: 10px;
+}
+
+.box {
+    background: rgba(255, 255, 255, 0.95);
+    border: 2px solid #3b1f1f;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    text-align: center
+}
+
+/* ===== メニュー ===== */
+.menu-list {
+    list-style: none;
+    padding: 0;
+}
+
+    .menu-list li {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        border-bottom: 1px solid #ccc;
+        padding: 10px 0;
+    }
+
+    .menu-list img {
+        width: 80px;
+        border-radius: 6px;
+    }
+
+.menu-name {
+    flex: 2;
+}
+
+.menu-price {
+    flex: 1;
+    text-align: right;
+    font-weight: bold;
+}
+
+/* ===== フッター ===== */
+footer {
+    background: #3b1f1f;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    height: 60px;
+}
+
+/* ===== 店名のフォントかえるクラス===== */
+.shop-name {
+    font-family: "RocknRoll One", sans-serif;
+    font-size: 36px;
+    color: #c62828;
+    letter-spacing: 0.15em;
+}
+/* ===== 店名の説明フォントかえるクラス===== */
+.shopexplanation {
+    font-family: "RocknRoll One", sans-serif;
+    font-size: 24px;
+    color: #ffff00;
+    text-shadow: 1.5px 1.5px 0 #000000, -1.5px 1.5px 0 #000000, -1.5px -1.5px 0 #000000, 1.5px -1.5px 0 #000000;
+    
+}
+
+/* ===== 食べ物メニュー表を真ん中にするクラス===== */
+.menu1-image-only li {
+    justify-content: center; /* 横中央 */
+    border-bottom: none; /* 下線消す */
+}
+
+/* ===== 食べ物メニュー表の大きさを調整するクラス===== */
+.menu1-image-only img {
+    width: 500%;
+    max-width: 600px; /* 好きなサイズに調整 */
+    height: auto;
+}
+
+/* ===== 食べ物メニュをクリックできることがわかるようにするクラス===== */
+.menu-image-only img {
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+    .menu-image-only img:hover {
+        transform: scale(1.03);
+    }
+
+
+/* 画像2枚横並び用 */
+.menu2-image-only li {
+    display: flex;
+    justify-content: center; /* 中央寄せ */
+    align-items: center;
+    gap: 40px; /* 画像の間隔 */
+    border-bottom: none;
+}
+
+/* 画像サイズをそろえる */
+.menu2-image-only img {
+    width: 300%; /* 2枚で100%弱 */
+    max-width: 300px; /* 最大サイズ調整 */
+    height: auto;
+    border-radius: 6px;
+}
+
+.recommend-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    justify-items: center;
+}
+
+
+
+/* ===== アクセスの文字の大きさを変えるクラス===== */
+.accessfont {
+    font-size: 24px;
+    color: #ff007f;
+}
+
+.menu-nav {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 30px 0;
+}
+
+.recommend-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 0;
+}
+
+/* 各カード */
+.recommend-list li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: none;
+}
+
+/* 画像を大きく・開始位置を完全に揃える */
+.recommend-list img {
+    width: 100%;
+    max-width: 260px; /*  ここで大きさ調整 */
+    height: auto;
+    margin: 10px 0;
+    border-radius: 6px;
+}
+
+/* 名前 */
+.recommend-list .menu-name {
+    font-weight: bold;
+    text-align: center;
+}
+
+/* 価格 */
+.recommend-list .menu-price {
+    font-weight: bold;
+}
+
+.toggle-content {
+    display: none;
+}
+
+.toggle-title {
+    cursor: pointer;
+    position: relative;
+}
+
+    /* ＋ マーク */
+    .toggle-title::after 
+    {
+        content: "＋";
+        position: absolute;
+        right: 10px;
+        font-size: 20px;
+    }
+
+    /* 開いたら － */
+    .toggle-title.active::after {
+        content: "－";
+    }
+
+
+/*　メニュー検索　*/
+.menu-search {
+    text-align: center;
+    margin: 20px 0;
+}
+
+    .menu-search input {
+        width: 80%;
+        max-width: 400px;
+        padding: 10px;
+        font-size: 16px;
+        border-radius: 6px;
+        border: 2px solid #3b1f1f;
+    }
+
+.search-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 80%;
+    max-width: 400px;
+}
+
+    .search-wrapper input {
+        width: 100%;
+        padding: 10px 36px 10px 10px; /* 右に余白 */
+        font-size: 16px;
+        border-radius: 6px;
+        border: 2px solid #3b1f1f;
+    }
+
+#clearSearch {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    background: none;
+    font-size: 20px;
+    cursor: pointer;
+    display: none; /* 最初は非表示 */
+}
+
+#noResult {
+    font-size: 1.0em;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+
+
+
+.toggle-title
+{
+    cursor: pointer;
+    position: relative;
+    display: flex; /* 追加 */
+    align-items: center; /* 追加 */
+    gap: 10px; /* 追加 */
+    padding-right: 40px; /* ＋マーク分 */
+}
+
+    .toggle-title img 
+    {
+        width: 26px;
+        height: 26px;
+        object-fit: cover;
+    }
+
+
+.menu-link {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #3b1f1f;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+    .menu-link:hover {
+        background-color: #7a3e3e;
+        transform: translateY(-2px);
+    }
+
+/* ===== ドロップダウンメニュー ===== */
+.has-submenu {
+    position: relative;
+}
+
+/* サブメニュー本体 */
+.submenu {
+    display: none;
+    position: absolute;
+    top: 25px; /* ナビの高さと同じ */
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(59, 31, 31, 0.95);
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+    border-radius: 6px;
+    min-width: 200px;
+    z-index: 1100;
+}
+
+    /* サブメニューの項目 */
+    .submenu li {
+        text-align: center;
+    }
+
+    /* サブメニューのリンク */
+    .submenu a {
+        display: block;
+        padding: 10px 20px;
+        color: #fff;
+        text-decoration: none;
+    }
+
+        .submenu a:hover {
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+
+/* 折り畳みタイトル横のアイコン専用 */
+.toggle-icon {
+    width: 48px !important;
+    height: 48px !important;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.toggle-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+    position: relative;
+    padding-right: 40px;
+}
+
+    .toggle-title::after {
+        transition: transform 0.3s;
+    }
+
+    .toggle-title.active::after {
+        transform: rotate(180deg);
+    }
+
+.highlight {
+    background-color: yellow;
+    color: #000;
+    font-weight: bold;
+    padding: 0 3px;
+    border-radius: 3px;
+}
+
+
+/* スライダー枠 */
+.slider {
+    overflow: hidden;
+    width: 100%;
+}
+
+.slider-track {
+    display: flex;
+    width: max-content;
+}
+
+    .slider-track li {
+        list-style: none;
+        flex-shrink: 0;
+    }
+
+    .slider-track img {
+        height: 200px; /* 今のサイズのまま */
+        width: auto;
+        margin-right: 20px;
+    }
+
+
+
+
+
+/* ホバーしたら表示 */
+.has-submenu:hover .submenu {
+    display: block;
+}
+
+
+
+/* ===== レスポンシブ ===== */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hero {
+        padding: 80px 20px;
+    }
+
+        .hero h1 {
+            font-size: 2rem;
+        }
+
+    .menu-list li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu-list img {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .menu-price {
+        text-align: left;
+    }
+
+    .menu-nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .menu-link {
+        width: 80%;
+        text-align: center;
+    }
+
+    .submenu {
+        position: static;
+        transform: none;
+        background: #3b1f1f;
+    }
+
+    .has-submenu:hover .submenu {
+        display: block;
+    }
+}
+
+
